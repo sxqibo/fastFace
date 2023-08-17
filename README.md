@@ -14,7 +14,7 @@
 
 ### 1、引入
 ```shell
-composer require sxqibo/fastFace
+composer require sxqibo/fast-face
 ```
 
 ### 2、实例化
