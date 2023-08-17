@@ -30,11 +30,11 @@ $config 参数说明
 ```php
 $config = [
     // keyId
-    'accessKeyId' => 'LTAI5tMbs8UwjPW7wCMpQgFx',
+    'accessKeyId' => '',
     // keySecret
-    'accessKeySecret' => 'pCVFThIoZan8sgXCeTu8IMu64Nbmsg',
+    'accessKeySecret' => '',
     // 场景 id
-    'sceneId' => '1000007670',
+    'sceneId' => '',
     // 要接入的方案
     'productCode' => 'ID_PLUS',
     // 要进行活体检测的类型
