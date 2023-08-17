@@ -1,0 +1,21 @@
+{
+    "name": "sxqibo/fast-face",
+    "description": "实人认证",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sxqibo\\FastFace\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yun",
+            "email": "1427596852@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "alibabacloud/cloudauth-20190307": "dev-master"
+    }
+}
