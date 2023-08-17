@@ -136,7 +136,7 @@ class VerifyFaceForAliyun
      * @param  $request
      * @return |null
      */
-    public function faceVerifyAutoRoute($request, $method)
+    private function faceVerifyAutoRoute($request, $method)
     {
         foreach ($this->endpoints as $endpoint) {
             try {
@@ -168,7 +168,7 @@ class VerifyFaceForAliyun
      * @param InitFaceVerifyRequest $request
      * @return InitFaceVerifyResponse
      */
-    public function initFaceVerify(string $endpoint, InitFaceVerifyRequest $request): InitFaceVerifyResponse
+    private function initFaceVerify(string $endpoint, InitFaceVerifyRequest $request): InitFaceVerifyResponse
     {
         $client = $this->createClient($endpoint);
 
@@ -186,7 +186,7 @@ class VerifyFaceForAliyun
      * @param DescribeFaceVerifyRequest $request
      * @return DescribeFaceVerifyResponse
      */
-    public function describeFaceVerify(string $endpoint, DescribeFaceVerifyRequest $request): DescribeFaceVerifyResponse
+    private function describeFaceVerify(string $endpoint, DescribeFaceVerifyRequest $request): DescribeFaceVerifyResponse
     {
         $client = $this->createClient($endpoint);
 
@@ -235,12 +235,13 @@ class VerifyFaceForAliyun
     }
 
     /**
-     * 发起认证请求
+     * 获取请求凭证 id
      *
-     * @return InitFaceVerifyResponse
+     * @param array $initFaceVerify
+     * @return null
      * @throws Exception
      */
-    public function getCertifyId($initFaceVerify)
+    public function getCertifyId(array $initFaceVerify)
     {
         $response = null;
 
@@ -255,9 +256,13 @@ class VerifyFaceForAliyun
     }
 
     /**
-     * 查询 App 实人认证结果
+     * 获取认证结果
+     *
+     * @param string $certifyId 请求凭证 id
+     * @return null
+     * @throws Exception
      */
-    public function getCertifyResult(string $certifyId)
+    public function getVerifyResult(string $certifyId)
     {
         $result = null;
 

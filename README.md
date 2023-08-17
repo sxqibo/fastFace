@@ -80,12 +80,11 @@ $initFaceVerifyResponse = $verify->getCertifyId([
 
 方法定义:
 ```php
-public function getCertifyResult(string $certifyId, string $sceneId)
+public function getVerifyResult(string $certifyId)
 ```
 
 参数说明：
 - $certifyId：通过第一个方法请求得到
-- $sceneId：场景 id
 
 ### 4、返回结果
 
