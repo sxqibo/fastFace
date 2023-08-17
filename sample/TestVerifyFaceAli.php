@@ -59,7 +59,7 @@ class TestVerifyFaceAli
         $certifyId = '';
 
         $verify1 = new VerifyFaceForAliyun($this->config);
-        $response = $verify1->getCertifyResult($certifyId, $this->outerOrderNo);
+        $response = $verify1->getCertifyResult($certifyId);
 
         if ($response->body->code != 200) {
             print $response->body->message;

@@ -7,7 +7,7 @@ use AlibabaCloud\SDK\Cloudauth\V20190307\Models\DescribeFaceVerifyRequest;
 use AlibabaCloud\SDK\Cloudauth\V20190307\Models\DescribeFaceVerifyResponse;
 use AlibabaCloud\SDK\Cloudauth\V20190307\Models\InitFaceVerifyRequest;
 use AlibabaCloud\SDK\Cloudauth\V20190307\Models\InitFaceVerifyResponse;
-use AlibabaCloud\SDK\OSS\OSS\Config;
+use Darabonba\OpenApi\Models\Config;
 use AlibabaCloud\Tea\Utils\Utils;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 use Exception;
@@ -257,12 +257,12 @@ class VerifyFaceForAliyun
     /**
      * 查询 App 实人认证结果
      */
-    public function getCertifyResult(string $certifyId, string $sceneId = '')
+    public function getCertifyResult(string $certifyId)
     {
         $result = null;
 
         try {
-            $request = new DescribeFaceVerifyRequest(['sceneId' => $sceneId, 'certifyId' => $certifyId]);
+            $request = new DescribeFaceVerifyRequest(['sceneId' => $this->sceneId, 'certifyId' => $certifyId]);
             $result = $this->faceVerifyAutoRoute($request, 'describeFaceVerify');
         } catch (Exception $e) {
             throw $e;
