@@ -16,6 +16,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "alibabacloud/cloudauth-20190307": "dev-master"
+        "alibabacloud/cloudauth-20190307": ">=2.0.4"
     }
 }
