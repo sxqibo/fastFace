@@ -110,7 +110,7 @@ class VerifyFaceForAliyun
         $this->sceneId = $config['sceneId'];
         $this->productCode = $config['productCode'];
         $this->model = $config['model'];
-        $this->callbackUrl = $config['callbackUrl'];
+        $this->callbackUrl = isset($config['callbackUrl']) && !empty($config['callbackUrl']) ? $config['callbackUrl'] : '';
     }
 
     /**
